@@ -1,4 +1,4 @@
-module github.com/libnat/infra
+module github.com/labagroup/infra
 
 go 1.14
 
