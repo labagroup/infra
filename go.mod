@@ -11,7 +11,6 @@ require (
 	github.com/gopub/errors v0.1.0
 	github.com/gopub/log v1.2.2
 	github.com/gopub/types v0.2.15
-	github.com/gopub/wine v1.24.2 // indirect
 	github.com/satori/go.uuid v1.2.0 // indirect
 	github.com/sendgrid/rest v2.4.1+incompatible // indirect
 	github.com/sendgrid/sendgrid-go v3.5.0+incompatible

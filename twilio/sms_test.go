@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/gopub/types"
-	"github.com/libnat/infra/twilio"
+	"github.com/labagroup/infra/twilio"
 )
 
 func TestSMS_Send(t *testing.T) {

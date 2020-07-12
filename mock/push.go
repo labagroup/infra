@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"github.com/gopub/log"
-	"github.com/libnat/infra/push"
+	"github.com/labagroup/infra/push"
 )
 
 type Pusher struct {
