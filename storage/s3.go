@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"context"
 	"errors"
+	"github.com/gopub/wine/exp/storage"
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
@@ -43,7 +44,7 @@ func NewS3(name string) *S3Bucket {
 	}
 }
 
-func (s *S3Bucket) Write(ctx context.Context, o *Object) (string, error) {
+func (s *S3Bucket) Write(ctx context.Context, o *storage.Object) (string, error) {
 	input := &s3manager.UploadInput{
 		Bucket:       aws.String(s.name),
 		Key:          aws.String(o.Name),

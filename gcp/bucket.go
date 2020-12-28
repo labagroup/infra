@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 
 	"cloud.google.com/go/storage"
-	"github.com/labagroup/infra/value"
+	winestorage "github.com/gopub/wine/exp/storage"
 )
 
 var DefaultACL = []storage.ACLRule{{
@@ -36,10 +36,10 @@ func (b *Bucket) Name() string {
 	return b.name
 }
 
-func (b *Bucket) Save(ctx context.Context, obj *value.Object) (string, error) {
+func (b *Bucket) Save(ctx context.Context, obj *winestorage.Object) (string, error) {
 	wc := b.handle.Object(obj.Name).NewWriter(ctx)
 	wc.ACL = b.acl
-	wc.ContentType = obj.MIMEType
+	wc.ContentType = obj.Type
 	wc.CacheControl = b.cacheControl
 	if _, err := wc.Write(obj.Content); err != nil {
 		return "", fmt.Errorf("write: %w", err)

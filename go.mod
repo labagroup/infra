@@ -12,10 +12,10 @@ require (
 	github.com/disintegration/imaging v1.6.2
 	github.com/go-sql-driver/mysql v1.5.0 // indirect
 	github.com/gopub/environ v0.3.5
-	github.com/gopub/errors v0.1.2
+	github.com/gopub/errors v0.1.6
 	github.com/gopub/log v1.2.3
-	github.com/gopub/types v0.2.22
-	github.com/gopub/wine v1.31.1
+	github.com/gopub/types v0.2.24
+	github.com/gopub/wine v1.35.8
 	github.com/satori/go.uuid v1.2.0 // indirect
 	github.com/sendgrid/rest v2.6.2+incompatible // indirect
 	github.com/sendgrid/sendgrid-go v3.7.2+incompatible

@@ -8,6 +8,7 @@ import (
 
 	"github.com/aliyun/aliyun-oss-go-sdk/oss"
 	"github.com/gopub/wine"
+	"github.com/gopub/wine/exp/storage"
 )
 
 type AliBucket struct {
@@ -55,7 +56,7 @@ func (b *AliBucket) Name() string {
 	return b.bucket.BucketName
 }
 
-func (b *AliBucket) Write(ctx context.Context, obj *Object) (string, error) {
+func (b *AliBucket) Write(ctx context.Context, obj *storage.Object) (string, error) {
 	options := []oss.Option{oss.ACL(b.ACL), oss.CacheControl(b.CacheControl)}
 	if obj.Type != "" {
 		options = append(options, oss.ContentType(obj.Type))
